@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   employee1Img,
   employee2Img,
@@ -187,6 +187,7 @@ const CarosolSliderBtn = ({ onClick, type, color }: CarosolSliderBtnProps) => {
           : 'right-0 translate-x-[50%]'
       } translate-y-[-50%] size-[2.5rem] rounded-full flex items-center justify-center border-[2px] text-[var(--color)] border-[var(--color)] bg-white shadow-md hover:bg-[var(--color)] hover:text-white hover:shadow-lg transform duration-300 hover:scale-[1.1] `}
       style={{
+        // @ts-expect-error Explanation: css variables can be used this wa actually
         '--color': color,
       }}
       onClick={onClick}
